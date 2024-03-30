@@ -1,5 +1,5 @@
 {
-  "name": "ballfalltune",
+  "name": "test-push",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "prettier": "prettier --check src/**/*.js",
     "prettier:fix": "prettier --write src/**/*.js",
     "format": "lint-staged",
-    "prepare": "cd .. && husky .husky init"
+    "prepare": "husky install .husky"
   },
   "lint-staged": {
     "src/**/*.js": [
