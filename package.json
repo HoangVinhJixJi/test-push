@@ -11,7 +11,7 @@
     "prettier": "prettier --check src/**/*.js",
     "prettier:fix": "prettier --write src/**/*.js",
     "format": "lint-staged",
-    "prepare": "husky install .husky"
+    "prepare": "husky .husky init"
   },
   "lint-staged": {
     "src/**/*.js": [
