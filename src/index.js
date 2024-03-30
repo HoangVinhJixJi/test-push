@@ -14,11 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static file
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')))
 
 // Template engine
 
-app.engine(
+  app.engine(
   'hbs',
   handlebars.engine({
     extname: '.hbs',
