@@ -36,6 +36,10 @@ class HomeController {
     return res.render('home');
   };
 
+  hello = async (req, res) => {
+    res.status(200).json({ message: 'Hello successfully' });
+  };
+
   // createNewSong = async (req, res, next) => {
   //   try {
   //     // Tạo một bản ghi mới trong bảng "songs"

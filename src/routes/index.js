@@ -7,6 +7,7 @@ const homeC = require('../controllers/home.c');
 
 // Define routes
 router.get('/', homeC.getHomePage);
+router.get('/hello', homeC.hello);
 // router.get('/create', homeC.createNewSong);
 
 module.exports = router;
