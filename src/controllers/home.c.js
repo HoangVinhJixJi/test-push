@@ -33,11 +33,32 @@ class HomeController {
     //   console.log(message);
     //   return res.render('home', message);
     // }
-    return res.render('home');
+    // return res.render('home');
+    res.status(200).json({ message: 'Home' });
   };
 
   hello = async (req, res) => {
     res.status(200).json({ message: 'Hello successfully' });
+  };
+
+  getDataPost = async (req, res) => {
+    console.log(req.body.password);
+    console.log(req.body.username);
+    if (req.body.username === 'admin' && req.body.password === 'admin') {
+      res.status(200).json({ message: 'Get data from body OK' });
+    } else {
+      res.status(200).json({ message: 'Get data from body fail' });
+    }
+  };
+
+  getDataGet = (req, res) => {
+    const name = req.query.name;
+    const age = req.query.age;
+    if (name === 'vinh' && age === '22') {
+      res.status(200).json({ message: `Get data from query successfully\n ${name} :  ${age}` });
+    } else {
+      res.status(200).json({ message: 'Get data from query fail' });
+    }
   };
 
   // createNewSong = async (req, res, next) => {
